@@ -1,0 +1,25 @@
+[
+	{
+		"shop_id" : 1,
+		"shop_name" : "sethia ki parchoon ki dukan",
+		"beacon_ids" : [
+			"abcd"
+		],
+		"gps_location": {
+			"lat" : 0.0,
+			"lon" : 0.0
+		}
+	},
+	{
+		"shop_id" : 2,
+		"shop_name" : "arpitva ke pede",
+		"beacon_ids" : [
+			"cdef",
+			"efgh"
+		],
+		"gps_location": {
+			"lat" : 0.0,
+			"lon" : 0.0
+		}
+	}
+]

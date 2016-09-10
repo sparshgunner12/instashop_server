@@ -1,0 +1,14 @@
+[
+	{
+		"shop_id" : 1,
+		"product_barcode" : "random_shit",
+		"product_name" : "Biscuit",
+		"price" : 200
+	},
+	{
+		"shop_id" : 2,
+		"product_barcode" : "random_shit_part_2",
+		"product_name" : "Pede",
+		"price" : 200
+	}
+]
