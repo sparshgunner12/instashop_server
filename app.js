@@ -7,7 +7,6 @@ var express = require('express')
   , methodOverride = require('method-override')
   , mc = require('mongodb').MongoClient
   , ObjectId = require('mongodb').ObjectID
-  , async =require('async')
   , fs = require('fs')
   , io = require("socket.io")
   ;
