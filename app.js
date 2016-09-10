@@ -1,7 +1,6 @@
 var express = require('express')
   , fs = require('fs')
   , util = require('util')
-  , logger = require('morgan')
   , session = require('express-session')
   , bodyParser = require("body-parser")
   , cookieParser = require("cookie-parser")

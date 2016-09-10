@@ -3,7 +3,7 @@
 		"shop_id" : 1,
 		"shop_name" : "sethia ki parchoon ki dukan",
 		"beacon_ids" : [
-			"abcd"
+			"94c0f461a5f12f04adb1000000000000"
 		],
 		"gps_location": {
 			"lat" : 0.0,
@@ -14,8 +14,7 @@
 		"shop_id" : 2,
 		"shop_name" : "arpitva ke pede",
 		"beacon_ids" : [
-			"cdef",
-			"efgh"
+			"7a6ca926a2877c47d8bf000000000000"
 		],
 		"gps_location": {
 			"lat" : 0.0,
