@@ -1,14 +1,57 @@
 [
 	{
-		"shop_id" : 1,
-		"product_barcode" : "random_shit",
-		"product_name" : "Biscuit",
-		"price" : 200
+		"id" : 1,
+		"name": "Kinley Bottle",
+		"shopName": "More Megastore",
+		"shopId": 1,
+		"description": "Quench Your Thirst",
+		"barcode" : "EAN8#89000724",
+		"price" : 20.0,
+		"discount" : 10.0,
+		"imageSrc" : "http://sugamsauda.com/image/cache/data/LUCKNOW/CONFECTIONARY/MINERAL%20WATER/Kinley1L-40x40.jpg" 
 	},
 	{
-		"shop_id" : 2,
-		"product_barcode" : "random_shit_part_2",
-		"product_name" : "Pede",
-		"price" : 200
+		"id" : 2,
+		"name": "Diet Coke",
+		"shopName": "Big Bazaar",
+		"shopId" : 3,
+		"description": "Thrill of coke without extra calories",
+		"barcode" : "EAN13#8901764061257",
+		"price" : 30.0,
+		"discount" : 10.0,
+		"imageSrc" : "http://43s0w3yikyo2qsm4r33qc6d7.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/diet-coke-cans-24-x-330-128x128.jpg" 
+	},
+	{
+		"id" : 3,
+		"name": "Diamond Chips",
+		"shopName": "Big Bazaar",
+		"shopId": 3,
+		"description": "Chips like never before",
+		"barcode" : "EAN13#8906004560163",
+		"price" : 10.0,
+		"discount" : 0.0,
+		"imageSrc" : "https://images-na.ssl-images-amazon.com/images/I/31hJ94sl9XL._SS40_.jpg" 
+	},
+	{
+		"id" : 4,
+		"name": "Paper Boat - Chilli Guava",
+		"shopName": "Big Bazaar",
+		"shopId": 3,
+		"description": "Drinks and memories",
+		"barcode" : "UPCE#08080211",
+		"price" : 25.0,
+		"discount" : 0.0,
+		"imageSrc" : "http://www.paperboatdrinks.com/uploads/gallery/chilli_guava_main.png" 
+	},
+	{
+		"id" : 5,
+		"name": "Paper Boat - Aam Ras",
+		"shopName": "More Megastore",
+		"shopId": 3,
+		"description": "Drinks and memories",
+		"barcode" : "UPCE#08080211",
+		"price" : 25.0,
+		"discount" : 0.0,
+		"imageSrc" : "http://paperboatdrinks.com/uploads/gallery/aamras_new.jpg" 
 	}
 ]

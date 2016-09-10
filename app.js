@@ -3,12 +3,12 @@ var express = require('express')
   , util = require('util')
   , session = require('express-session')
   , bodyParser = require("body-parser")
-  , cookieParser = require("cookie-parser")
+ // , cookieParser = require("cookie-parser")
   , methodOverride = require('method-override')
   , mc = require('mongodb').MongoClient
   , ObjectId = require('mongodb').ObjectID
   , fs = require('fs')
-  , io = require("socket.io")
+ // , io = require("socket.io")
   ;
 
 var mongoStore = require('connect-mongo')(session);
@@ -76,22 +76,23 @@ mc.connect(MONGO_URL, function(err, db){
 var app = express();
 
 //app.use(logger());
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(session({ store: new mongoStore({ url: MONGO_URL }), secret: 'keyboard cat' }));
 
 var sendShopLocations = function(index, list_of_beacons, list_of_shops, cb) {
+  console.log(list_of_beacons.length);
   if (index == list_of_beacons.length) {
     cb(list_of_shops);
     return;
   } else if (index < list_of_beacons.length) {
-    mdb.collection('shops').find({beacon_ids: list_of_beacons[index]}).toArray(function(err, data) {
+    mdb.collection('shops').find({beaconIds: list_of_beacons[index].id}).toArray(function(err, data) {
       if (!err) {
         if (data.length != 0) {
-          console.log(data[0]);
-          list_of_shops[data[0].shop_id] = 1;
+          //console.log(data[0]);
+          list_of_shops.push(data[0]);
         }
       }
       sendShopLocations(index + 1, list_of_beacons, list_of_shops, cb);
@@ -100,18 +101,21 @@ var sendShopLocations = function(index, list_of_beacons, list_of_shops, cb) {
 };
 
 app.post('/getstores',function(req, res) {
+  console.log(req.body.list_of_beacons);
   list_of_beacons = JSON.parse(req.body.list_of_beacons);
   gps_location = req.body.gps_location;
-  sendShopLocations(0, list_of_beacons, {}, function(list_of_shops) {
+  sendShopLocations(0, list_of_beacons, [], function(list_of_shops) {
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify({ "list_of_shops": list_of_shops}));
+    console.log(list_of_shops);
+    res.send(list_of_shops);
   });
 });
 
 app.post('/getproduct',function(req, res) {
   barcode = req.body.barcode;
+  shopId = req.body.shopId;
   console.log(barcode);
-  mdb.collection('inventory').find({product_barcode: barcode}).toArray(function(err, data) {
+  mdb.collection('inventory').find({barcode: barcode}).toArray(function(err, data) {
       res.setHeader('Content-Type', 'application/json');
       if (!err) {
         if (data.length != 0) {
@@ -119,6 +123,7 @@ app.post('/getproduct',function(req, res) {
             if (err) {
               res.send("");
             } else {
+              console.log(data[0]);
               res.send(data[0]);
             }
           });

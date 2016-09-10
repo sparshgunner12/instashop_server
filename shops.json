@@ -1,24 +1,44 @@
 [
 	{
-		"shop_id" : 1,
-		"shop_name" : "sethia ki parchoon ki dukan",
-		"beacon_ids" : [
+		"id" : 1,
+		"name" : "More Megastore",
+		"address" : "Survey No. 14, Near Shiva Ganga Layout, Outer Ring Road, Mahadevapura, Bengaluru, Karnataka 560048",
+		"description": "India's leading super market with unbelievable offers & best deals on Food, Fashion & Accessories, Home Appliances, Groceries etc",
+		"beaconIds" : [
 			"94c0f461a5f12f04adb1000000000000"
 		],
-		"gps_location": {
+		"gps": {
 			"lat" : 0.0,
 			"lon" : 0.0
-		}
+		},
+		"imageSrc" : "https://pbs.twimg.com/profile_images/605410859/More_Megastore_normal.jpg"
 	},
 	{
-		"shop_id" : 2,
-		"shop_name" : "arpitva ke pede",
-		"beacon_ids" : [
+		"id" : 2,
+		"name" : "The Mobile Store",
+		"address" : "Inorbit Mall, #7, Exxpart, Industry Whitfield,, Rd Number 7, KIADB Export Promotion Industrial Area, Bengaluru, Karnataka 560066",
+		"description": "Buy latest mobiles, tablets & accessories online at best price in India with multiple payment options.",
+		"beaconIds" : [
 			"7a6ca926a2877c47d8bf000000000000"
 		],
-		"gps_location": {
+		"gps": {
 			"lat" : 0.0,
 			"lon" : 0.0
-		}
+		},
+		"imageSrc" : "https://www.storesnoffers.com/Content/images/store_images/f9682394-7068-4c52-a896-34ea1c92bc63_63581386291241054_64X64_6.png"
+	},
+	{
+		"id" : 3,
+		"name" : "Big Bazaar",
+		"address" : "Vaswani-Cosmos Mall, ITPL Road, Next To HP Petrol Pump, Brookefields, Bangalore",
+		"description": "Isse sasta aur accha aur kahin nahi.",
+		"beaconIds" : [
+			"0116946503ed659234a8000000000000"
+		],
+		"gps": {
+			"lat" : 0.0,
+			"lon" : 0.0
+		},
+		"imageSrc" : "https://pbs.twimg.com/profile_images/689019701553303552/3829TPDq_normal.jpg"
 	}
 ]
