@@ -9,8 +9,7 @@
     "method-override": ">= 2.0.2",
     "express-session": ">= 1.6.1",
     "mongodb": ">= 1.0.0",
-    "cron": "1.0.0",
-    "connect-mongo": "0.8.2",
+    "connect-mongo": "0.8.2"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
