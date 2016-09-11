@@ -101,9 +101,12 @@ var sendShopLocations = function(index, list_of_beacons, list_of_shops, cb) {
 };
 
 app.post('/getstores',function(req, res) {
-  console.log(req.body.list_of_beacons);
-  list_of_beacons = JSON.parse(req.body.list_of_beacons);
-  gps_location = req.body.gps_location;
+  console.log(req.body.shop_identifiers);
+  shop_identifiers = JSON.parse(req.body.shop_identifiers);
+  list_of_beacons = shop_identifiers['beacons'];
+  console.log(list_of_beacons);
+  gps_location = shop_identifiers['location'];
+  console.log(gps_location);
   sendShopLocations(0, list_of_beacons, [], function(list_of_shops) {
     res.setHeader('Content-Type', 'application/json');
     console.log(list_of_shops);
