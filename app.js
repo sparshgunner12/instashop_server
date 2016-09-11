@@ -4,7 +4,7 @@ var express = require('express')
   , session = require('express-session')
   , bodyParser = require("body-parser")
  // , cookieParser = require("cookie-parser")
-  , methodOverride = require('method-override')
+ // , methodOverride = require('method-override')
   , mc = require('mongodb').MongoClient
   , ObjectId = require('mongodb').ObjectID
   , fs = require('fs')
@@ -79,7 +79,7 @@ var app = express();
 //app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(methodOverride());
+//app.use(methodOverride());
 app.use(session({ store: new mongoStore({ url: MONGO_URL }), secret: 'keyboard cat' }));
 
 var sendShopLocations = function(index, list_of_beacons, list_of_shops, cb) {
