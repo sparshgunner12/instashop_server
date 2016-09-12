@@ -11,10 +11,32 @@
 		"imageSrc" : "http://sugamsauda.com/image/cache/data/LUCKNOW/CONFECTIONARY/MINERAL%20WATER/Kinley1L-40x40.jpg" 
 	},
 	{
+		"id" : 1,
+		"name": "Kinley Bottle",
+		"shopName": "Big Bazaar",
+		"shopId": 3,
+		"description": "Quench Your Thirst",
+		"barcode" : "EAN8#89000724",
+		"price" : 20.0,
+		"discount" : 10.0,
+		"imageSrc" : "http://sugamsauda.com/image/cache/data/LUCKNOW/CONFECTIONARY/MINERAL%20WATER/Kinley1L-40x40.jpg" 
+	},
+	{
 		"id" : 2,
 		"name": "Diet Coke",
 		"shopName": "Big Bazaar",
 		"shopId" : 3,
+		"description": "Thrill of coke without extra calories",
+		"barcode" : "EAN13#8901764061257",
+		"price" : 30.0,
+		"discount" : 10.0,
+		"imageSrc" : "http://43s0w3yikyo2qsm4r33qc6d7.wpengine.netdna-cdn.com/wp-content/uploads/2014/06/diet-coke-cans-24-x-330-128x128.jpg" 
+	},
+	{
+		"id" : 2,
+		"name": "Diet Coke",
+		"shopName": "More Megastore",
+		"shopId" : 1,
 		"description": "Thrill of coke without extra calories",
 		"barcode" : "EAN13#8901764061257",
 		"price" : 30.0,
@@ -44,10 +66,21 @@
 		"imageSrc" : "http://www.paperboatdrinks.com/uploads/gallery/chilli_guava_main.png" 
 	},
 	{
-		"id" : 5,
+		"id" : 4,
+		"name": "Paper Boat - Chilli Guava",
+		"shopName": "More Megastore",
+		"shopId": 1,
+		"description": "Drinks and memories",
+		"barcode" : "EAN13#8908001705851",
+		"price" : 25.0,
+		"discount" : 0.0,
+		"imageSrc" : "http://www.paperboatdrinks.com/uploads/gallery/chilli_guava_main.png" 
+	},
+	{
+		"id" : 6,
 		"name": "Paper Boat - Aam Ras",
 		"shopName": "More Megastore",
-		"shopId": 3,
+		"shopId": 1,
 		"description": "Drinks and memories",
 		"barcode" : "EAN13#8908001705363",
 		"price" : 25.0,
@@ -56,12 +89,34 @@
 	},
 	{
 		"id" : 6,
+		"name": "Paper Boat - Aam Ras",
+		"shopName": "Big Bazaar",
+		"shopId": 3,
+		"description": "Drinks and memories",
+		"barcode" : "EAN13#8908001705363",
+		"price" : 0.0,
+		"discount" : 0.0,
+		"imageSrc" : "http://paperboatdrinks.com/uploads/gallery/aamras_new.jpg" 
+	},
+	{
+		"id" : 7,
 		"name": "Red Bull",
 		"shopName": "More Megastore",
-		"shopId": 3,
+		"shopId": 1,
 		"description": "Gives you wings",
 		"barcode" : "EAN8#90162602",
 		"price" : 110.0,
+		"discount" : 10.0,
+		"imageSrc" : "https://images-na.ssl-images-amazon.com/images/I/71r5AAJAtCL._SL1500_.jpg" 
+	},
+	{
+		"id" : 7,
+		"name": "Red Bull",
+		"shopName": "Big Bazaar",
+		"shopId": 3,
+		"description": "Gives you wings",
+		"barcode" : "EAN8#90162602",
+		"price" : 100.0,
 		"discount" : 10.0,
 		"imageSrc" : "https://images-na.ssl-images-amazon.com/images/I/71r5AAJAtCL._SL1500_.jpg" 
 	}

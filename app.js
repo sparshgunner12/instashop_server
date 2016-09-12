@@ -91,6 +91,7 @@ var sendShopLocations = function(index, list_of_beacons, list_of_shops, cb) {
     mdb.collection('shops').find({beaconIds: list_of_beacons[index].id}).toArray(function(err, data) {
       if (!err) {
         if (data.length != 0) {
+          data[0].signalStrength = list_of_beacons[index].signalStrength;
           //console.log(data[0]);
           list_of_shops.push(data[0]);
         }
@@ -109,16 +110,31 @@ app.post('/getstores',function(req, res) {
   console.log(gps_location);
   sendShopLocations(0, list_of_beacons, [], function(list_of_shops) {
     res.setHeader('Content-Type', 'application/json');
-    console.log(list_of_shops);
-    res.send(list_of_shops);
+    var new_list_above = [], new_list_below = [];
+    var min_val = {};
+    for (var i = 0; i < list_of_shops.length; ++i) {
+      if (list_of_shops[i].signalStrength >= -65) {
+        new_list_above.push(list_of_shops[i]);
+      } else {
+        new_list_below.push(list_of_shops[i]);
+      }
+    }
+    if (new_list_above.length == 0) {
+      console.log(new_list_below);
+      res.send(new_list_below);
+    } else {
+      console.log(new_list_above);
+      res.send(new_list_above);
+    } 
   });
 });
 
 app.post('/getproduct',function(req, res) {
   barcode = req.body.barcode;
-  shopId = req.body.shopId;
+  shopId = parseInt(req.body.shopId);
   console.log(barcode);
-  mdb.collection('inventory').find({barcode: barcode}).toArray(function(err, data) {
+  console.log(shopId);
+  mdb.collection('inventory').find({barcode: barcode, shopId: shopId}).toArray(function(err, data) {
       res.setHeader('Content-Type', 'application/json');
       if (!err) {
         if (data.length != 0) {
@@ -131,10 +147,12 @@ app.post('/getproduct',function(req, res) {
             }
           });
         } else {
+          res.statusCode = 404;
           res.send("");
         }
       } else {
-        res.send("");
+        res.statusCode = 404;
+        res.send(null);
       }
     });
 });
